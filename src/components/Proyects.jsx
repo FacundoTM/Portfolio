@@ -31,39 +31,47 @@ import ArrowButton from "./ArrowButton";
 
 const Proyects = () => {
   return (
-    <div className="h-screen bg-[#0C0A1F]">
-      <div className="h-screen w-3/4 bg-[#4F3DFF] m-auto">
-        <ArrowButton estilos="m-auto relative top-[-30px] cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300" />
+    <div className="h-screen bg-white md:bg-[#0C0A1F]">
+      <div className="h-screen w-3/4 bg-white md:bg-[#4F3DFF] m-auto">
+        <ArrowButton estilos="border-2 rounded-full border-slate-700 md:border-transparent m-auto relative top-[-30px] cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300" />
         <h1 className="text-white font-bold text-[64px] text-center mb-20">
           Proyectos
         </h1>
 
         {Proyectos.map((proyecto) => (
-          <>
-            <div className="grid grid-cols-[25%_auto] w-3/4 bg-white m-auto mt-5">
-              <img
-                src={proyecto.img}
-                alt="Turnos"
-                className="h-[180px] w-[180px] m-5"
-              />
-              <div className="m-5 relative">
-                <h1 className="font-bold text-[24px]">{proyecto.titulo}</h1>
-                <h2 className="text-[20px]">{proyecto.descripcion}</h2>
-                <br />
-
+          <div
+            key={proyecto.titulo}
+            className="w-3/4 lg:max-w-full lg:flex m-auto mb-2"
+            //className="max-w-sm w-full lg:max-w-full lg:flex "
+          >
+            <div
+              className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+              style={{ backgroundImage: `url(${proyecto.img})` }}
+              title={proyecto.titulo}
+            ></div>
+            <div className="lg:w-3/4 border-r border-b border-l  lg:border-l-0 lg:border-t bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+              <div className="mb-8">
+                <div className="text-gray-900 font-bold text-xl mb-2">
+                  {proyecto.titulo}
+                </div>
+                <p className="text-gray-700 text-base">
+                  {proyecto.descripcion}
+                </p>
+              </div>
+              <div className="flex items-center">
                 <a href={proyecto.link}>
-                  <button className="text-white text-[16px] bg-[#4F3DFF] p-3 rounded-md absolute bottom-0 left-0">
+                  <button className="text-white text-[16px] bg-[#4F3DFF] p-3 rounded-md bottom-0 left-0">
                     Visitar
                   </button>
                 </a>
                 <a href={proyecto.link2}>
-                  <button className="ml-3 text-white text-[16px] bg-[#4F3DFF] p-3 rounded-md absolute bottom-0 left-[70px]">
+                  <button className="ml-3 text-white text-[16px] bg-[#4F3DFF] p-3 rounded-md bottom-0 left-[70px]">
                     Ver codigo en Github
                   </button>
                 </a>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

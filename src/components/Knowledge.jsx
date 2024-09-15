@@ -1,7 +1,7 @@
 const Knowledge = () => {
   return (
-    <div className="h-[173px] bg-[#0C0A1F] grid">
-      <div className="m-auto inline-grid grid-cols-6 gap-10 align-middle ">
+    <div className="h-[250px] md:h-[173px] bg-[#0C0A1F] grid">
+      <div className="m-auto inline-grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-10 align-middle ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="64"

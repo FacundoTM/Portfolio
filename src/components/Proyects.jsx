@@ -41,11 +41,11 @@ const Proyects = () => {
         {Proyectos.map((proyecto) => (
           <div
             key={proyecto.titulo}
-            className="w-3/4 lg:max-w-full lg:flex m-auto mb-2"
+            className="w-3/4 md:max-w-full md:flex m-auto mb-2"
             //className="max-w-sm w-full lg:max-w-full lg:flex "
           >
             <div
-              className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+              className="h-48 md:h-auto md:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
               style={{ backgroundImage: `url(${proyecto.img})` }}
               title={proyecto.titulo}
             ></div>
@@ -60,12 +60,12 @@ const Proyects = () => {
               </div>
               <div className="flex items-center">
                 <a href={proyecto.link}>
-                  <button className="text-white text-[16px] bg-[#4F3DFF] p-3 rounded-md bottom-0 left-0">
+                  <button className="transition ease-in-out delay-100 duration-300 text-white text-[16px] hover:opacity-85 bg-[#4F3DFF] p-3 rounded-md bottom-0 left-0">
                     Visitar
                   </button>
                 </a>
                 <a href={proyecto.link2}>
-                  <button className="ml-3 text-white text-[16px] bg-[#4F3DFF] p-3 rounded-md bottom-0 left-[70px]">
+                  <button className="text-ellipsis overflow-hidden whitespace-nowrap max-w-32 md:max-w-60 transition ease-in-out delay-100 duration-300 ml-3 text-white text-[16px] hover:opacity-85 bg-[#4F3DFF] p-3 rounded-md bottom-0 left-[70px]">
                     Ver codigo en Github
                   </button>
                 </a>
